@@ -2,8 +2,15 @@ import React, { Component } from 'react';
 import '../App.css';
 
 import ContentContainer from './ContentContainer';
+import photos from '../photo_data.js';
+
+import trainPic from '../photos/7train_40th_st.jpg';
 
 class App extends Component {
+
+  headerPhoto() {
+
+  }
 
   render() {
     return (
@@ -13,6 +20,8 @@ class App extends Component {
           This is Austin's photo site!
           </p>
         </header>
+        <img src={trainPic} />
+
         <ContentContainer />
       </div>
     );

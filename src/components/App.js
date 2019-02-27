@@ -9,7 +9,9 @@ import trainPic from '../photos/7train_40th_st.jpg';
 class App extends Component {
 
   headerPhoto() {
-
+    const selectedPhoto = photos.filter(photo => photo.name === 'Sunnyside 7 Train at Sunset')
+    const url = `..${selectedPhoto[0].path}`
+    return require(url)
   }
 
   render() {
@@ -20,7 +22,7 @@ class App extends Component {
           This is Austin's photo site!
           </p>
         </header>
-        <img src={trainPic} />
+        <img src={this.headerPhoto} />
 
         <ContentContainer />
       </div>

@@ -11,7 +11,9 @@ class ContentContainer extends React.Component {
 
   render() {
     return (
-      this.testRender()
+      <div id="component-contentContainer">
+        {this.testRender()}
+      </div>
     )
   }
 }

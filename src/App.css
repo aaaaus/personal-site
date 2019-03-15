@@ -30,3 +30,17 @@
     transform: rotate(360deg);
   }
 } */
+
+/* for testing */
+
+#component-App {
+  border-style: solid;
+  border-width: 1px;
+  border-color: red;
+}
+
+#component-contentContainer {
+  border-style: solid;
+  border-width: 1px;
+  border-color: orange;
+}

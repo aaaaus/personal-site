@@ -12,6 +12,7 @@ class ContentContainer extends React.Component {
   render() {
     return (
       <div id="component-contentContainer">
+        <h2>COMPONENT: CONTENTCONTAINER</h2>
         {this.testRender()}
       </div>
     )

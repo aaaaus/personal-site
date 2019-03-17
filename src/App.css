@@ -31,6 +31,10 @@
   }
 } */
 
+.header-image {
+  max-width: 100%;
+}
+
 /* for testing */
 
 #component-App {

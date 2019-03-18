@@ -9,13 +9,15 @@ import photos from '../photo_data.js';
 class App extends Component {
 
   headerPhoto() {
-    const selectedPhoto = photos.filter(photo => photo.name === 'Sunnyside 7 Train at Sunset')
+    const selectedPhoto = photos.filter(photo => photo.photoid === 1)
     const url = `${selectedPhoto[0].path}`
     return url
-  }
+
+  } //headerPhoto
 
   render() {
     return (
+
       <div id="component-App">
         <h2>COMPONENT: APP</h2>
         <header className="App-header">
@@ -27,9 +29,12 @@ class App extends Component {
         <img src={this.headerPhoto()} alt="7 Train in Queens" className="header-image"/>
         <ContentContainer />
       </div>
+
     );
-  }
-}
+
+  } //render
+
+} //class App
 
 export default App;
 

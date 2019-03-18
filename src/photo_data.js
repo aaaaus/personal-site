@@ -1,7 +1,7 @@
 const photos = [
   {
-    name: 'Sunnyside 7 Train at Sunset',
-    path: '/images/7train_40th_st.jpg',
+    photoid: 1,
+    path: '/images/img0001.jpg',
     date: 2018,
     location: 'New York',
     caption: 'Manhattan-bound 7 train in Sunnyside, Queens',
@@ -9,38 +9,38 @@ const photos = [
     long: '-73.925137'
   },
   {
-    name: 'Test 2',
-    path: '',
-    date: 2018,
+    photoid: 2,
+    path: '/images/img0002.jpg',
+    date: 2017,
     location: 'New York',
-    caption: '',
+    caption: 'Williamsburg waterfront',
     lat: '',
     long: ''
   },
   {
-    name: 'Test 2',
-    path: '',
-    date: 2018,
+    photoid: 3,
+    path: '/images/img0003.jpg',
+    date: 2017,
     location: 'New York',
-    caption: '',
+    caption: 'Flushing-bound 7 train turns into Queensboro Plaza',
     lat: '',
     long: ''
   },
   {
-    name: 'Test 2',
-    path: '',
-    date: 2018,
+    photoid: 4,
+    path: '/images/img0004.jpg',
+    date: 2017,
     location: 'New York',
-    caption: '',
+    caption: 'Sunset over Manhattan from LIC',
     lat: '',
     long: ''
   },
   {
-    name: 'Test 2',
-    path: '',
-    date: 2018,
+    photoid: 5,
+    path: '/images/img0005.jpg',
+    date: 2017,
     location: 'New York',
-    caption: '',
+    caption: 'Manhattan-bound 7 train approaching 61st Street-Woodside station',
     lat: '',
     long: ''
   },

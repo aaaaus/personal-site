@@ -2,15 +2,15 @@ import React from 'react';
 
 const Photo = (props) => {
 
+  console.log("Photo props are: ", props);
+
     return (
 
       <div>
-        HOT DOGS
+        <img src={props.photo.path} alt={props.photo.caption} />
       </div>
 
     )
 }
 
 export default Photo;
-
-{/*  <img src={photo.path} alt={photo.caption} className="gallery-image"/> */}

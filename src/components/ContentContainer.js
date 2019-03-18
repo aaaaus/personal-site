@@ -6,21 +6,18 @@ import photos from '../photo_data.js';
 
 class ContentContainer extends React.Component {
 
-  // testRender() {
-  //   const photos = photos.map(photo => {
-  //     return <Photo className="gallery-image" photo={photo}>
-  //   });
-  //
-  //   return photos
-  //
-  // } //testRender
+  photoRender() {
+
+    return photos.map(photo => <Photo className="gallery-image" photo={photo} key={photo.photoid} />)
+
+  } //testRender
 
   render() {
     return (
 
       <div id="component-contentContainer">
         <h2>COMPONENT: CONTENTCONTAINER</h2>
-        {photos.map(photo => <Photo className="gallery-image" photo={photo} />)}
+        {this.photoRender()}
       </div>
 
     )

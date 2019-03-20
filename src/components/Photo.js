@@ -6,8 +6,8 @@ const Photo = (props) => {
 
     return (
 
-      <div>
-        <img src={props.photo.path} alt={props.photo.caption} />
+      <div className='gallery-div'>
+        <img src="/images/img0013-thumb.jpg" alt={props.photo.caption} />
       </div>
 
     )

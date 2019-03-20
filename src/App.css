@@ -35,6 +35,10 @@
   max-width: 100%;
 }
 
+.gallery-div img {
+  max-width: 20vw;
+}
+
 /* for testing */
 
 #component-App {

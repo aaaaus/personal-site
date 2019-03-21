@@ -22,7 +22,7 @@ class App extends Component {
         <h2>COMPONENT: APP</h2>
         <header className="App-header">
           <p>
-          This is Austin's photo site!
+          Header content
           </p>
         </header>
         {/* <img src={trainPic} alt="7 Train in Queens"/> */}

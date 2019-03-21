@@ -44,6 +44,51 @@ const photos = [
     lat: '',
     long: ''
   },
+  {
+    photoid: 6,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: ''
+  },
+  {
+    photoid: 7,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: ''
+  },
+  {
+    photoid: 8,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: ''
+  },
+  {
+    photoid: 9,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: ''
+  },
+  {
+    photoid: 10,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: ''
+  },
 ];
 
 export default photos;

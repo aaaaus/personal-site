@@ -39,7 +39,7 @@ const photos = [
     photoid: 5,
     path: '/images/img0005.jpg',
     date: 2017,
-    location: 'New York',
+    location: 'Los Angeles',
     caption: 'Manhattan-bound 7 train approaching 61st Street-Woodside station',
     lat: '',
     long: ''

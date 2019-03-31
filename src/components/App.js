@@ -27,8 +27,8 @@ class App extends Component {
         </header>
         {/* <img src={trainPic} alt="7 Train in Queens"/> */}
         <img src={this.headerPhoto()} alt="7 Train in Queens" className="header-image"/>
-        <ContentContainer /> //send in property for NYC
-        <ContentContainer /> //send in property for LA
+        <ContentContainer location="New York" />
+        <ContentContainer location="Los Angeles" />
       </div>
 
     );

@@ -48,7 +48,7 @@ const photos = [
     photoid: 6,
     path: '',
     date: 0,
-    location: '',
+    location: 'Los Angeles',
     caption: '',
     lat: '',
     long: ''

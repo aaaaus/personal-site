@@ -35,8 +35,26 @@
   max-width: 100%;
 }
 
+/* **********CONTENT CONTAINER********** */
+
 #component-contentContainer {
   text-align: center;
+}
+
+.feature-image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.location-header {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: helvetica;
+  font-size: 72px;
+  font-weight: bold;
 }
 
 .gallery-div {
@@ -48,16 +66,16 @@
   margin: 5px 10px;
 }
 
-/* for testing */
+/* **********TESTING STYLES********** */
+
+.helper {
+  color: fuchsia;
+}
 
 #component-App {
   border-style: solid;
   border-width: 1px;
   border-color: red;
-}
-
-#component-App-helper {
-  color: red;
 }
 
 #component-contentContainer {

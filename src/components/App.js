@@ -2,27 +2,28 @@ import React, { Component } from 'react';
 import '../App.css';
 
 import ContentContainer from './ContentContainer';
-import photos from '../photo_data.js';
+
+//import photos from '../photo_data.js';
 
 //import trainPic from '../photos/7train_40th_st.jpg';
 
 class App extends Component {
 
-  headerPhoto() {
-    const selectedPhoto = photos.filter(photo => photo.photoid === 1)
-    const url = `${selectedPhoto[0].path}`
-    return url
-
-  } //headerPhoto
+  // headerPhoto() {
+  //   const selectedPhoto = photos.filter(photo => photo.photoid === 1)
+  //   const url = `${selectedPhoto[0].path}`
+  //   return url
+  //
+  // } //headerPhoto
 
   render() {
     return (
 
       <div id="component-App">
-        <span id="component-App-helper">COMPONENT: APP</span>
+        <span className="helper">COMPONENT: APP</span>
         <header className="App-header">
           <p>
-          Header content
+          Austin Luft Photography * New York * Los Angeles * Europe
           </p>
         </header>
           {/*

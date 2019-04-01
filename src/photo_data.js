@@ -99,6 +99,46 @@ const photos = [
     long: '',
     feature: false
   },
+  {
+    photoid: 11,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 12,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 13,
+    path: '',
+    date: 0,
+    location: '',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 14,
+    path: '/images/img0014.jpg',
+    date: 2019,
+    location: 'Los Angeles',
+    caption: 'Downtown LA from Griffith Park',
+    lat: '',
+    long: '',
+    feature: true
+  },
 ];
 
 export default photos;

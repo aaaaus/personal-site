@@ -3,41 +3,38 @@ import '../App.css';
 
 import ContentContainer from './ContentContainer';
 
-//import photos from '../photo_data.js';
-
-//import trainPic from '../photos/7train_40th_st.jpg';
-
 class App extends Component {
 
-  // headerPhoto() {
-  //   const selectedPhoto = photos.filter(photo => photo.photoid === 1)
-  //   const url = `${selectedPhoto[0].path}`
-  //   return url
-  //
-  // } //headerPhoto
+  state = {
+    location: '',
+    helperTextOn: false
+  }
+
+  helperText() {
+    if (this.state.helperTextOn) {
+      return <span className="helper">COMPONENT: APP</span>
+    }
+  }
 
   render() {
     return (
 
       <div id="component-App">
-        <span className="helper">COMPONENT: APP</span>
+        {this.helperText()}
         <header className="App-header">
           <p>
           Austin Luft Photography * New York * Los Angeles * Europe
           </p>
         </header>
-          {/*
 
-          <img src={trainPic} alt="7 Train in Queens"/>
-
-          */}
-          {/*
-
-          <img src={this.headerPhoto()} alt="7 Train in Queens" className="header-image"/>
-
-          */}
-        <ContentContainer location="New York" />
-        <ContentContainer location="Los Angeles" />
+        <ContentContainer
+          location="New York"
+          helperTextOn={this.state.helperTextOn}
+          />
+        <ContentContainer
+          location="Los Angeles"
+          helperTextOn={this.state.helperTextOn}
+          />
       </div>
 
     );

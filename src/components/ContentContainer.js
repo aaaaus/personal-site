@@ -6,6 +6,16 @@ import photos from '../photo_data.js';
 
 class ContentContainer extends React.Component {
 
+  state = {
+    helperTextOn: this.props.helperTextOn
+  }
+
+  helperText() {
+    if (this.state.helperTextOn) {
+      return <span className="helper">COMPONENT: CONTENTCONTAINER</span>
+    }
+  }
+
   //function returns JSX img tag if the photo matches the location and is flagged as featured
   featureRender() {
     const selectedPhoto = photos.filter(photo => photo.feature === true && photo.location === this.props.location)
@@ -19,7 +29,7 @@ class ContentContainer extends React.Component {
       return ''
     }
 
-  } //featureRender
+  }
 
   //function renders all photos of matching location type
   photoRender() {
@@ -28,13 +38,13 @@ class ContentContainer extends React.Component {
 
     return filteredPhotos.map(photo => <Photo className="gallery-image" photo={photo} key={photo.photoid} />)
 
-  } //photoRender
+  }
 
   render() {
     return (
 
       <div id="component-contentContainer">
-        <span className="helper">COMPONENT: CONTENTCONTAINER</span><br />
+        {this.helperText()}<br />
 
         <div className="feature-image-container">
           {this.featureRender()}

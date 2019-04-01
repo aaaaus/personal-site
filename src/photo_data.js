@@ -6,7 +6,8 @@ const photos = [
     location: 'New York',
     caption: 'Manhattan-bound 7 train in Sunnyside, Queens',
     lat: '40.743843',
-    long: '-73.925137'
+    long: '-73.925137',
+    feature: true
   },
   {
     photoid: 2,
@@ -15,7 +16,8 @@ const photos = [
     location: 'New York',
     caption: 'Williamsburg waterfront',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 3,
@@ -24,7 +26,8 @@ const photos = [
     location: 'New York',
     caption: 'Flushing-bound 7 train turns into Queensboro Plaza',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 4,
@@ -33,7 +36,8 @@ const photos = [
     location: 'New York',
     caption: 'Sunset over Manhattan from LIC',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 5,
@@ -42,7 +46,8 @@ const photos = [
     location: 'Los Angeles',
     caption: 'Manhattan-bound 7 train approaching 61st Street-Woodside station',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 6,
@@ -51,7 +56,8 @@ const photos = [
     location: 'Los Angeles',
     caption: '',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 7,
@@ -60,7 +66,8 @@ const photos = [
     location: '',
     caption: '',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 8,
@@ -69,7 +76,8 @@ const photos = [
     location: '',
     caption: '',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 9,
@@ -78,7 +86,8 @@ const photos = [
     location: '',
     caption: '',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
   {
     photoid: 10,
@@ -87,7 +96,8 @@ const photos = [
     location: '',
     caption: '',
     lat: '',
-    long: ''
+    long: '',
+    feature: false
   },
 ];
 

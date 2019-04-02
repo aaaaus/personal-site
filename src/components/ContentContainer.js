@@ -34,7 +34,7 @@ class ContentContainer extends React.Component {
   //function renders all photos of matching location type
   photoRender() {
 
-    const filteredPhotos = photos.filter(photo => photo.location === this.props.location)
+    const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
 
     return filteredPhotos.map(photo => <Photo className="gallery-image" photo={photo} key={photo.photoid} />)
 

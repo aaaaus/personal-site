@@ -43,7 +43,7 @@ const photos = [
     photoid: 5,
     path: '/images/img0005.jpg',
     date: 2017,
-    location: 'Los Angeles',
+    location: 'New York',
     caption: 'Manhattan-bound 7 train approaching 61st Street-Woodside station',
     lat: '',
     long: '',
@@ -51,10 +51,10 @@ const photos = [
   },
   {
     photoid: 6,
-    path: '',
-    date: 0,
-    location: 'Los Angeles',
-    caption: '',
+    path: '/images/img0006.jpg',
+    date: 2018,
+    location: 'New York',
+    caption: 'Evening commute on Queens Boulevard',
     lat: '',
     long: '',
     feature: false
@@ -139,6 +139,26 @@ const photos = [
     long: '',
     feature: true
   },
+  {
+    photoid: 15,
+    path: '',
+    date: 0,
+    location: 'Los Angeles',
+    caption: 'Downtown LA from Griffith Park',
+    lat: '',
+    long: '',
+    feature: true
+  },
+  {
+    photoid: 16,
+    path: '',
+    date: 2019,
+    location: 'Los Angeles',
+    caption: 'Downtown LA from Griffith Park',
+    lat: '',
+    long: '',
+    feature: true
+  }
 ];
 
 export default photos;

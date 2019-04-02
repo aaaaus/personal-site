@@ -4,13 +4,22 @@ const Photo = (props) => {
 
   //console.log("Photo props are: ", props);
 
+  function imgThumb() {
+
+    const thumbPath = props.photo.path.slice(0,-4) + '-thumb.jpg'
+
     return (
-
-      <div className='gallery-div'>
-        <img src="/images/img0013-thumb.jpg" alt={props.photo.caption} />
-      </div>
-
+      <img src={thumbPath} alt={props.photo.caption} />
     )
+  }
+
+  return (
+
+  <div className='gallery-div'>
+    {imgThumb()}
+  </div>
+
+  )
 }
 
 export default Photo;

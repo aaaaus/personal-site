@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = (props) => {
 
-  //console.log("Photo props are: ", props);
+  console.log("Photo props are: ", props);
 
   function imgThumb() {
 
@@ -15,7 +15,7 @@ const Photo = (props) => {
 
   return (
 
-  <div className='gallery-div'>
+  <div className='gallery-div' onClick={() => props.handleThumbClick(props.photo.path)}>
     {imgThumb()}
   </div>
 

@@ -6,6 +6,8 @@ import ContentContainer from './ContentContainer';
 class App extends Component {
 
   state = {
+    allPics: [],
+    activePic: [],
     location: '',
     helperTextOn: false
   }
@@ -14,6 +16,10 @@ class App extends Component {
     if (this.state.helperTextOn) {
       return <span className="helper">COMPONENT: APP</span>
     }
+  }
+
+  handleThumbClick(e) {
+    console.log(e);
   }
 
   render() {
@@ -30,6 +36,7 @@ class App extends Component {
         <ContentContainer
           location="New York"
           helperTextOn={this.state.helperTextOn}
+          handleThumbClick={this.handleThumbClick}
           />
         <ContentContainer
           location="Los Angeles"

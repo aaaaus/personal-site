@@ -22,6 +22,12 @@ class App extends Component {
     console.log(e);
   }
 
+  largeViewDiv() {
+    if (this.state.activePic.length > 0) {
+      return <div><h1>BIG PIC HERE</h1></div>
+    }
+  }
+
   render() {
     return (
 
@@ -42,6 +48,7 @@ class App extends Component {
           location="Los Angeles"
           helperTextOn={this.state.helperTextOn}
           />
+        {this.largeViewDiv()}
       </div>
 
     );

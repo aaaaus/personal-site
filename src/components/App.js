@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import '../App.css';
 
+import photos from '../photo_data.js';
+
 import ContentContainer from './ContentContainer';
 
 class App extends Component {
 
   state = {
-    allPics: [],
+    allPics: photos,
     activePic: [],
     location: '',
     helperTextOn: false
@@ -18,13 +20,19 @@ class App extends Component {
     }
   }
 
-  handleThumbClick(e) {
-    console.log(e);
+  //function is sent down to Photo component, and when clicked, path attribute of selected photo is sent back; state (activePic) updated
+  handleThumbClick = (path) => {
+    const selectedPic = this.state.allPics.filter(pic => pic.path === path)
+    this.setState({
+      activePic: selectedPic
+    })
   }
 
+  //div is rendered when there is an active pic selected
   largeViewDiv() {
     if (this.state.activePic.length > 0) {
-      return <div><h1>BIG PIC HERE</h1></div>
+      console.log(this.state.activePic[0].caption);
+      return <div><h1>{this.state.activePic[0].caption}</h1></div>
     }
   }
 

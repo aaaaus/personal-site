@@ -6,10 +6,12 @@ import photos from '../photo_data.js';
 
 class ContentContainer extends React.Component {
 
+  //inherits from "App" component's state above, passed down as prop
   state = {
     helperTextOn: this.props.helperTextOn
   }
 
+  //adds helper text for dev if toggled on in state
   helperText() {
     if (this.state.helperTextOn) {
       return <span className="helper">COMPONENT: CONTENTCONTAINER</span>

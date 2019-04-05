@@ -2,7 +2,7 @@ import React from 'react';
 
 const Photo = (props) => {
 
-  console.log("Photo props are: ", props);
+  // console.log("Photo props are: ", props);
 
   function imgThumb() {
 

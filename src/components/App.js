@@ -4,6 +4,7 @@ import '../App.css';
 import photos from '../photo_data.js';
 
 import ContentContainer from './ContentContainer';
+import Modal from './Modal';
 
 class App extends Component {
 
@@ -11,7 +12,21 @@ class App extends Component {
     allPics: photos,
     activePic: [],
     location: '',
+    modalDisplay: false,
     helperTextOn: false
+  }
+
+  // showModal = () => {
+  //   this.setState({ modalDisplay: true });
+  // };
+
+  hideModal = () => {
+    this.setState({ modalDisplay: false });
+  };
+
+  activePicPath = () => {
+    const pic = this.state.activePic
+    return (pic.length > 0) ? pic.path : ''
   }
 
   helperText() {
@@ -20,31 +35,37 @@ class App extends Component {
     }
   }
 
-  //function is sent down to Photo component, and when clicked, path attribute of selected photo is sent back; state (activePic) updated
+  //function is sent down to Photo component, and when clicked, path attribute of selected photo is sent back; state (activePic) updated and modal is displayed
   handleThumbClick = (path) => {
     const selectedPic = this.state.allPics.filter(pic => pic.path === path)
     this.setState({
-      activePic: selectedPic
+      activePic: selectedPic,
+      modalDisplay: true
     })
   }
 
   //div is rendered when there is an active pic selected
-  largeViewDiv() {
-    if (this.state.activePic.length > 0) {
-      const url = `${this.state.activePic[0].path}`
-      return (
-        <div>
-          <img src={url} alt="" className="header-image"/>
-        </div>
-      )
-    }
-  }
+  // largeViewDiv() {
+  //   if (this.state.activePic.length > 0) {
+  //     const url = `${this.state.activePic[0].path}`
+  //     return (
+  //       <div id="large-view-div">
+  //         <img src={url} alt="" className="header-image"/>
+  //       </div>
+  //     )
+  //   }
+  // }
 
   render() {
     return (
 
       <div id="component-App">
         {this.helperText()}
+
+        <Modal show={this.state.modalDisplay} handleClose={this.hideModal}>
+          <img src={this.activePicPath()} alt="" className="header-image"/>
+        </Modal>
+
         <header className="App-header">
           <p>
           Austin Luft Photography * New York * Los Angeles * Europe
@@ -60,7 +81,8 @@ class App extends Component {
           location="Los Angeles"
           helperTextOn={this.state.helperTextOn}
           />
-        {this.largeViewDiv()}
+        {/* }{this.largeViewDiv()} */}
+
       </div>
 
     );

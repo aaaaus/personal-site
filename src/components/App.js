@@ -26,7 +26,8 @@ class App extends Component {
 
   activePicPath = () => {
     const pic = this.state.activePic
-    return (pic.length > 0) ? pic.path : ''
+    // debugger
+    return (pic.length > 0) ? pic[0].path : ''
   }
 
   helperText() {

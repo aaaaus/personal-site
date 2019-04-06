@@ -31,8 +31,12 @@ class App extends Component {
   //div is rendered when there is an active pic selected
   largeViewDiv() {
     if (this.state.activePic.length > 0) {
-      console.log(this.state.activePic[0].caption);
-      return <div><h1>{this.state.activePic[0].caption}</h1></div>
+      const url = `${this.state.activePic[0].path}`
+      return (
+        <div>
+          <img src={url} alt="" className="header-image"/>
+        </div>
+      )
     }
   }
 

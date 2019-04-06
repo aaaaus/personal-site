@@ -39,7 +39,12 @@ class ContentContainer extends React.Component {
 
     const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
 
-    return filteredPhotos.map(photo => <Photo className="gallery-image" photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
+    const photoArray = filteredPhotos.map(photo => <Photo photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
+
+    debugger
+
+    // return photoArray.push(<div className="gallery-div">GRAPEFRUIT</div>)
+    return photoArray
 
   }
 
@@ -54,7 +59,9 @@ class ContentContainer extends React.Component {
           <span className="location-header">{this.props.location}</span>
         </div>
 
-        {this.photoRender()}
+        <div className="gallery-wrapper">
+          {this.photoRender()}
+        </div>
 
       </div>
 

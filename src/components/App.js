@@ -45,18 +45,6 @@ class App extends Component {
     })
   }
 
-  //div is rendered when there is an active pic selected
-  // largeViewDiv() {
-  //   if (this.state.activePic.length > 0) {
-  //     const url = `${this.state.activePic[0].path}`
-  //     return (
-  //       <div id="large-view-div">
-  //         <img src={url} alt="" className="header-image"/>
-  //       </div>
-  //     )
-  //   }
-  // }
-
   render() {
     return (
 

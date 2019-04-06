@@ -24,8 +24,9 @@ class ContentContainer extends React.Component {
 
     if (selectedPhoto.length > 0) {
       const url = `${selectedPhoto[0].path}`
+      const caption = `${selectedPhoto[0].caption}`
       return (
-        <img src={url} alt="7 Train in Queens" className="header-image"/>
+        <img src={url} alt={caption} className="header-image"/>
       )
     } else {
       return ''

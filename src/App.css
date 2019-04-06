@@ -32,7 +32,8 @@
 } */
 
 .header-image {
-  max-width: 100%;
+  width: 100%;
+  max-width: 1920px;
 }
 
 /* **********CONTENT CONTAINER********** */
@@ -63,7 +64,7 @@
 }
 
 .gallery-div img {
-  max-width: 18vw;
+  max-width: 250px;
   margin: 5px 10px;
 }
 

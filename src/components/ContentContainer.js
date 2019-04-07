@@ -46,6 +46,27 @@ class ContentContainer extends React.Component {
 
   }
 
+  //renders blank divs for gallery to fill out last row if less than 4 images
+  blankDivRender() {
+
+    const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
+
+    const remainder = filteredPhotos.length % 4
+
+    if (remainder) {
+
+      const blankDiv = <div className='gallery-div'></div>
+
+      if (remainder === 1) {
+        return <>{blankDiv}</>
+      } else if (remainder === 2) {
+        return <>{blankDiv}{blankDiv}</>
+      } else {
+        return <>{blankDiv}{blankDiv}{blankDiv}</>
+      }
+    }
+  }
+
   render() {
     return (
 
@@ -59,6 +80,7 @@ class ContentContainer extends React.Component {
 
         <div className="gallery-wrapper">
           {this.photoRender()}
+          {this.blankDivRender()}
         </div>
 
       </div>

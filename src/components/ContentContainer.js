@@ -41,8 +41,6 @@ class ContentContainer extends React.Component {
 
     const photoArray = filteredPhotos.map(photo => <Photo photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
 
-    debugger
-
     // return photoArray.push(<div className="gallery-div">GRAPEFRUIT</div>)
     return photoArray
 

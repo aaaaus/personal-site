@@ -71,11 +71,31 @@
 /* this is the div immediately surrounding the image */
 .gallery-div {
   display: inline-block;
+  width: 20%;
+  max-width: 230px;
+  margin: 5px;
 }
 
 .gallery-div img {
-  max-width: 230px;
-  margin: 5px;
+  /* max-width: 230px;
+  margin: 5px; */
+  max-width:100%;
+  max-height:100%;
+}
+
+/* for when window width is smaller than 640px */
+@media (max-width: 640px) {
+
+  .gallery-wrapper {
+    background-color: green;
+  }
+
+  .gallery-div {
+    display: inline-block;
+    width: 40%;
+    margin: 5px;
+  }
+
 }
 
 /* **********MODAL********** */

@@ -56,9 +56,8 @@ class App extends Component {
         </Modal>
 
         <header className="App-header">
-          <p>
-          Austin Luft Photography * New York * Los Angeles * Europe
-          </p>
+          <h3>Austin Luft</h3>
+          <p>New York | Los Angeles | Europe</p>
         </header>
 
         <ContentContainer

@@ -26,7 +26,7 @@ class App extends Component {
 
   activePicPath = () => {
     const pic = this.state.activePic
-    // debugger
+
     return (pic.length > 0) ? pic[0].path : ''
   }
 
@@ -51,7 +51,10 @@ class App extends Component {
       <div id="component-App">
         {this.helperText()}
 
-        <Modal show={this.state.modalDisplay} handleClose={this.hideModal}>
+        <Modal
+        show={this.state.modalDisplay}
+        handleClose={this.hideModal}
+        >
           <img src={this.activePicPath()} alt="" className="header-image"/>
         </Modal>
 
@@ -70,6 +73,11 @@ class App extends Component {
           helperTextOn={this.state.helperTextOn}
           />
         {/* }{this.largeViewDiv()} */}
+
+        <footer className="App-footer">
+
+        <p>© Austin Luft 2017-2019</p>
+        </footer>
 
       </div>
 

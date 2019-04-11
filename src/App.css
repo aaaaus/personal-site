@@ -31,13 +31,17 @@
   }
 } */
 
+body {
+  background-color: #333;
+}
+
 .header-image {
   width: 100%;
   max-width: 1920px;
 }
 
 .App-header {
-  /* background-color: #282c34; */
+  background-color: white;
   height: 10vh;
   display: flex;
   flex-direction: column;
@@ -47,9 +51,16 @@
   /* color: white; */
 }
 
+.App-footer {
+  background-color: #333;
+  color: white;
+  height: 20vh;
+}
+
 /* **********CONTENT CONTAINER********** */
 
 #component-contentContainer {
+  background-color: white;
   text-align: center;
 }
 

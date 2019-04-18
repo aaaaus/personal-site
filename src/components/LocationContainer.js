@@ -1,7 +1,7 @@
 import React from 'react';
 
+import './LocationContainer.css'
 import PhotoCard from './PhotoCard';
-
 import photos from '../photo_data.js';
 
 class LocationContainer extends React.Component {

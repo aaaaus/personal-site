@@ -14,12 +14,11 @@ class PhotoCard extends React.Component {
     this.imageRef.current.addEventListener('load', this.setSpans);
   }
 
+  //see below for explanation of this function
   setSpans = () => {
     const height = this.imageRef.current.clientHeight;
 
-    const spans = Math.ceil(height / 10)
-
-    console.log(spans);
+    const spans = Math.ceil(height / 19)
 
     this.setState({ spans })
   }
@@ -51,3 +50,5 @@ class PhotoCard extends React.Component {
 }
 
 export default PhotoCard;
+
+//setSpan function: this function calculates how many spans are required for the containing div by first checking the height of the image. The height is divided by the css row height (make sure these values are close to matching - I set the actual css row height 1 pixel more to ensure a gap between adjacent photos above and below (since css gap for top and bottom are set to zero)

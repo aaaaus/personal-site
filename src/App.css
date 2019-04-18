@@ -57,90 +57,6 @@ body {
   height: 20vh;
 }
 
-/* **********CONTENT CONTAINER********** */
-
-.location-container {
-  background-color: white;
-  text-align: center;
-}
-
-.feature-image-div {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.location-header {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: helvetica, sans-serif;
-  font-size: 72px;
-  font-weight: bold;
-  color: black;
-}
-
-/* .gallery-wrapper {
-  margin: 50px 0px 0px 0px;
-  display: inline-block;
-  max-width: 960px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: purple;
-} */
-
-.gallery-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 0 10px;
-  grid-auto-rows: 10px;
-
-  border-style: solid;
-  border-width: 1px;
-  border-color: lime;
-}
-
-.gallery-wrapper img {
-  width: 250px;
-}
-
-
-/* this is the div immediately surrounding the image */
-
-/*
-.gallery-div {
-  display: inline-block;
-  width: 20%;
-  max-width: 230px;
-  margin: 1% 1% 1% 1%;
-}
-
-.gallery-div img {
-  max-width:100%;
-  max-height:100%;
-  cursor: pointer;
-}
- */
-
-
-/* for when window width is smaller than 640px */
-
-/*
-@media (max-width: 640px) {
-
-  .gallery-wrapper {
-    background-color: green;
-  }
-
-  .gallery-div {
-    display: inline-block;
-    width: 40%;
-    margin: 5px;
-  }
-
-} */
-
 
 /* **********MODAL********** */
 
@@ -191,7 +107,7 @@ body {
   border-color: red;
 }
 
-#component-contentContainer {
+.location-container {
   border-style: solid;
   border-width: 1px;
   border-color: orange;

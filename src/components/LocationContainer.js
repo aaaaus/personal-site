@@ -39,7 +39,15 @@ class LocationContainer extends React.Component {
 
     const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
 
-    const photoArray = filteredPhotos.map(photo => <PhotoCard photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
+    const photoArray = filteredPhotos.map(photo => {
+      return (
+        <PhotoCard
+          photo={photo}
+          key={photo.photoid}
+          handleThumbClick={this.props.handleThumbClick}
+        />
+      )
+    })
 
     // return photoArray.push(<div className="gallery-div">GRAPEFRUIT</div>)
     return photoArray
@@ -47,40 +55,40 @@ class LocationContainer extends React.Component {
   }
 
   //renders blank divs for gallery to fill out last row if less than 4 images
-  blankDivRender() {
-
-    const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
-
-    const remainder = filteredPhotos.length % 4
-
-    if (remainder) {
-
-      const blankDiv = <div className='gallery-div'></div>
-
-      if (remainder === 1) {
-        return <>{blankDiv}</>
-      } else if (remainder === 2) {
-        return <>{blankDiv}{blankDiv}</>
-      } else {
-        return <>{blankDiv}{blankDiv}{blankDiv}</>
-      }
-    }
-  }
+  // blankDivRender() {
+  //
+  //   const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
+  //
+  //   const remainder = filteredPhotos.length % 4
+  //
+  //   if (remainder) {
+  //
+  //     const blankDiv = <div className='gallery-div'></div>
+  //
+  //     if (remainder === 1) {
+  //       return <>{blankDiv}</>
+  //     } else if (remainder === 2) {
+  //       return <>{blankDiv}{blankDiv}</>
+  //     } else {
+  //       return <>{blankDiv}{blankDiv}{blankDiv}</>
+  //     }
+  //   }
+  // }
 
   render() {
     return (
 
-      <div id="component-contentContainer">
+      <div className="location-container">
         {this.helperText()}<br />
 
-        <div className="feature-image-container">
+        <div className="feature-image-div">
           {this.featureRender()}
           <span className="location-header">{this.props.location}</span>
         </div>
 
         <div className="gallery-wrapper">
           {this.photoRender()}
-          {this.blankDivRender()}
+          {/* {this.blankDivRender()} */}
         </div>
 
       </div>

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import Photo from './Photo';
+import PhotoCard from './PhotoCard';
 
 import photos from '../photo_data.js';
 
-class ContentContainer extends React.Component {
+class LocationContainer extends React.Component {
 
   //inherits from "App" component's state above, passed down as prop
   state = {
@@ -14,7 +14,7 @@ class ContentContainer extends React.Component {
   //adds helper text for dev if toggled on in state
   helperText() {
     if (this.state.helperTextOn) {
-      return <span className="helper">COMPONENT: CONTENTCONTAINER</span>
+      return <span className="helper">COMPONENT: LocationContainer</span>
     }
   }
 
@@ -39,7 +39,7 @@ class ContentContainer extends React.Component {
 
     const filteredPhotos = photos.filter(photo => photo.location === this.props.location && photo.feature === false)
 
-    const photoArray = filteredPhotos.map(photo => <Photo photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
+    const photoArray = filteredPhotos.map(photo => <PhotoCard photo={photo} key={photo.photoid} handleThumbClick={this.props.handleThumbClick} />)
 
     // return photoArray.push(<div className="gallery-div">GRAPEFRUIT</div>)
     return photoArray
@@ -91,4 +91,4 @@ class ContentContainer extends React.Component {
 
 } //class ContentContainer
 
-export default ContentContainer;
+export default LocationContainer;

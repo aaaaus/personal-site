@@ -3,7 +3,7 @@ import '../App.css';
 
 import photos from '../photo_data.js';
 
-import ContentContainer from './ContentContainer';
+import LocationContainer from './LocationContainer';
 import Modal from './Modal';
 
 class App extends Component {
@@ -13,7 +13,7 @@ class App extends Component {
     activePic: [],
     location: '',
     modalDisplay: false,
-    helperTextOn: false
+    helperTextOn: true
   }
 
   // showModal = () => {
@@ -63,20 +63,19 @@ class App extends Component {
           <p>New York | Los Angeles | Europe</p>
         </header>
 
-        <ContentContainer
+        <LocationContainer
           location="New York"
           helperTextOn={this.state.helperTextOn}
           handleThumbClick={this.handleThumbClick}
           />
-        <ContentContainer
+
+        <LocationContainer
           location="Los Angeles"
           helperTextOn={this.state.helperTextOn}
           />
-        {/* }{this.largeViewDiv()} */}
 
         <footer className="App-footer">
-
-        <p>© Austin Luft 2017-2019</p>
+          <p>© Austin Luft 2017-2019</p>
         </footer>
 
       </div>

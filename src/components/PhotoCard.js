@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Photo = (props) => {
+const PhotoCard = (props) => {
 
   // console.log("Photo props are: ", props);
 
@@ -22,4 +22,4 @@ const Photo = (props) => {
   )
 }
 
-export default Photo;
+export default PhotoCard;

@@ -13,7 +13,7 @@ class App extends Component {
     activePic: [],
     location: '',
     modalDisplay: false,
-    helperTextOn: true
+    helperTextOn: false
   }
 
   // showModal = () => {

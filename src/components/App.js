@@ -26,7 +26,6 @@ class App extends Component {
 
   activePicPath = () => {
     const pic = this.state.activePic
-
     return (pic.length > 0) ? pic[0].path : ''
   }
 
@@ -53,14 +52,18 @@ class App extends Component {
 
         <Modal
         show={this.state.modalDisplay}
-        handleClose={this.hideModal}
+        hideModal={this.hideModal}
         >
-          <img src={this.activePicPath()} alt="" className="header-image"/>
+          <img src={this.activePicPath()} alt="" className="modal-pic"/>
         </Modal>
 
         <header className="App-header">
           <h3>Austin Luft</h3>
-          <p>New York | Los Angeles | Europe</p>
+          <p>
+            <a href="#new-york">New York</a> |
+            <a href="#los-angeles">Los Angeles</a> |
+            <a href="#europe">Europe</a>
+          </p>
         </header>
 
         <LocationContainer

@@ -83,7 +83,7 @@ class LocationContainer extends React.Component {
 
         <div className="feature-image-div">
           {this.featureRender()}
-          <span className="location-header">{this.props.location}</span>
+          <span className="location-header" id={(this.props.location.toLowerCase().split(' ').join('-'))}>{this.props.location}</span>
         </div>
 
         <div className="gallery-wrapper">

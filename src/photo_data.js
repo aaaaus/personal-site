@@ -123,7 +123,7 @@ const photos = [
     photoid: 13,
     path: '/images/img0013.jpg',
     date: 0,
-    location: '',
+    location: 'New York',
     caption: '',
     lat: '',
     long: '',
@@ -141,9 +141,9 @@ const photos = [
   },
   {
     photoid: 15,
-    path: '',
+    path: '/images/img0015.jpg',
     date: 0,
-    location: '',
+    location: 'New York',
     caption: '',
     lat: '',
     long: '',
@@ -151,14 +151,104 @@ const photos = [
   },
   {
     photoid: 16,
-    path: '',
+    path: '/images/img0016.jpg',
     date: 2019,
-    location: '',
+    location: 'New York',
     caption: '',
     lat: '',
     long: '',
     feature: false
-  }
+  },
+  {
+    photoid: 17,
+    path: '/images/img0017.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 18,
+    path: '/images/img0018.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 19,
+    path: '/images/img0019.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 20,
+    path: '/images/img0020.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 21,
+    path: '/images/img0021.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 22,
+    path: '/images/img0022.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 23,
+    path: '/images/img0023.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 24,
+    path: '/images/img0024.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
+  {
+    photoid: 25,
+    path: '/images/img0025.jpg',
+    date: 2019,
+    location: 'New York',
+    caption: '',
+    lat: '',
+    long: '',
+    feature: false
+  },
 ];
 
 export default photos;

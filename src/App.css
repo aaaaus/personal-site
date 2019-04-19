@@ -35,6 +35,10 @@ body {
   background-color: #333;
 }
 
+img {
+  image-rendering: crisp-edges;
+}
+
 .header-image {
   width: 100%;
   max-width: 1920px;
@@ -66,7 +70,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 1;
 }
 
@@ -82,7 +86,7 @@ body {
   position: fixed;
   background: white;
   width: 85vw;
-  height: 85vh;
+  height: 90vh;
   top:50%;
   left:50%;
   transform: translate(-50%,-50%);
@@ -91,6 +95,7 @@ body {
 
 .modal-main img {
   width: auto;
+  /* max-width: 90vw; */
   height: 100%;
 }
 

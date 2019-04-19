@@ -35,7 +35,7 @@ class App extends Component {
     }
   }
 
-  //function is sent down to Photo component, and when clicked, path attribute of selected photo is sent back; state (activePic) updated and modal is displayed
+  //function is sent down to PhotoCard component, and when clicked, path attribute of selected photo is sent back; state (activePic) updated and modal is displayed
   handleThumbClick = (path) => {
     const selectedPic = this.state.allPics.filter(pic => pic.path === path)
     this.setState({
@@ -54,9 +54,7 @@ class App extends Component {
         show={this.state.modalDisplay}
         hideModal={this.hideModal}
         activePic={this.state.activePic}
-        >
-          {/* <img src={this.activePicPath()} alt="" className="modal-pic"/> */}
-        </Modal>
+         />
 
         <header className="app-header">
           <h3>Austin Luft</h3>

@@ -40,35 +40,36 @@ class Modal extends React.Component {
     this.modalRef.current.addEventListener('load', this.togglePortraitLandscape);
   }
 
-  preventHide(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  }
-
+  //changes state:orientation based on dimensions of image
   togglePortraitLandscape = () => {
+    console.log(this.modalRef.current.clientHeight, this.modalRef.current.clientWidth);
+
     const height = this.modalRef.current.clientHeight;
     const width = this.modalRef.current.clientWidth;
 
-    if (height > width) {
-      this.setState({ orientation: 'portrait' })
-    } else {
+    if (width > height) {
       this.setState({ orientation: 'landscape' })
+    } else {
+      this.setState({ orientation: 'portrait' })
     }
   }
 
-  // toggleOrientationClassName = () => {
-  //   this.state.orientation
-  //   return
-  // }
-
+  //toggles className which in turn will/will not display modal
   showHideClassName = () => {
     const { show } = this.props
     return show ? "modal fade-in display-block" : "modal display-none";
   }
 
+  //returns src string for image if activePic is selected (non-zero array)
   activePicPathString = () => {
     const pic = this.props.activePic
     return (pic.length > 0) ? pic[0].path : ''
+  }
+
+  //prevents hideModal propogation when clicking on image itself
+  preventHide(e) {
+    e.preventDefault();
+    e.stopPropagation();
   }
 
   render() {

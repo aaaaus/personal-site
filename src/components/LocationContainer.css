@@ -41,9 +41,11 @@
 
 .gallery-wrapper img {
   width: 270px;
+  cursor: pointer; /* faster here than in hover */
 }
 
 .gallery-wrapper img:hover {
+  cursor: pointer;
   background: #f9f9f9;
   opacity: 0.75;
   top: 0;

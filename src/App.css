@@ -1,3 +1,54 @@
+body {
+  background-color: #333;
+}
+
+img {
+  image-rendering: crisp-edges;
+}
+
+.header-image {
+  width: 100%;
+  max-width: 1920px;
+}
+
+.app-header {
+  background-color: white;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+}
+
+.app-footer {
+  background-color: #333;
+  color: white;
+  height: 20vh;
+}
+
+
+/* **********TESTING STYLES********** */
+
+.helper {
+  color: fuchsia;
+}
+
+#component-App {
+  border-style: solid;
+  border-width: 1px;
+  border-color: red;
+}
+
+.location-container {
+  border-style: solid;
+  border-width: 1px;
+  border-color: orange;
+}
+
+
+
 /* .App {
   text-align: center;
 }
@@ -30,90 +81,3 @@
     transform: rotate(360deg);
   }
 } */
-
-body {
-  background-color: #333;
-}
-
-img {
-  image-rendering: crisp-edges;
-}
-
-.header-image {
-  width: 100%;
-  max-width: 1920px;
-}
-
-.App-header {
-  background-color: white;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
-  /* color: white; */
-}
-
-.App-footer {
-  background-color: #333;
-  color: white;
-  height: 20vh;
-}
-
-
-/* **********MODAL********** */
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 1;
-}
-
-.display-block {
-  display: block;
-}
-
-.display-none {
-  display: none;
-}
-
-.modal-main {
-  position: fixed;
-  background: white;
-  width: 85vw;
-  height: 90vh;
-  top:50%;
-  left:50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-
-.modal-main img {
-  width: auto;
-  /* max-width: 90vw; */
-  height: 100%;
-}
-
-
-/* **********TESTING STYLES********** */
-
-.helper {
-  color: fuchsia;
-}
-
-#component-App {
-  border-style: solid;
-  border-width: 1px;
-  border-color: red;
-}
-
-.location-container {
-  border-style: solid;
-  border-width: 1px;
-  border-color: orange;
-}

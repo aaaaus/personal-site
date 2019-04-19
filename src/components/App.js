@@ -53,16 +53,15 @@ class App extends Component {
         <Modal
         show={this.state.modalDisplay}
         hideModal={this.hideModal}
+        activePic={this.state.activePic}
         >
-          <img src={this.activePicPath()} alt="" className="modal-pic"/>
+          {/* <img src={this.activePicPath()} alt="" className="modal-pic"/> */}
         </Modal>
 
-        <header className="App-header">
+        <header className="app-header">
           <h3>Austin Luft</h3>
           <p>
-            <a href="#new-york">New York</a> |
-            <a href="#los-angeles">Los Angeles</a> |
-            <a href="#europe">Europe</a>
+            <a href="#new-york">New York</a> | <a href="#los-angeles">Los Angeles</a> | <a href="#europe">Europe</a>
           </p>
         </header>
 
@@ -77,7 +76,7 @@ class App extends Component {
           helperTextOn={this.state.helperTextOn}
           />
 
-        <footer className="App-footer">
+        <footer className="app-footer">
           <p>© Austin Luft 2017-2019</p>
         </footer>
 

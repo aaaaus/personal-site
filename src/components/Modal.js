@@ -31,12 +31,35 @@ class Modal extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = { orientation: 'portrait' }
+
+    this.modalRef = React.createRef();
+  }
+
+  componentDidUpdate() {
+    this.modalRef.current.addEventListener('load', this.togglePortraitLandscape);
   }
 
   preventHide(e) {
     e.preventDefault();
     e.stopPropagation();
   }
+
+  togglePortraitLandscape = () => {
+    const height = this.modalRef.current.clientHeight;
+    const width = this.modalRef.current.clientWidth;
+
+    if (height > width) {
+      this.setState({ orientation: 'portrait' })
+    } else {
+      this.setState({ orientation: 'landscape' })
+    }
+  }
+
+  // toggleOrientationClassName = () => {
+  //   this.state.orientation
+  //   return
+  // }
 
   showHideClassName = () => {
     const { show } = this.props
@@ -53,7 +76,7 @@ class Modal extends React.Component {
     return (
       <div className={this.showHideClassName()} onClick={hideModal}>
         <div className="modal-main" >
-          <img src={this.activePicPathString()} alt="" className="modal-pic" onClick={this.preventHide} />
+          <img src={this.activePicPathString()} alt="" className={`modal-pic ${this.state.orientation}`} ref={this.modalRef} onClick={this.preventHide} />
           <br />
           <button onClick={hideModal}>close</button>
         </div>

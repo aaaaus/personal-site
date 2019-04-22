@@ -15,12 +15,13 @@ class Modal extends React.Component {
     this.modalRef.current.addEventListener('load', this.togglePortraitLandscape);
   }
 
-  //changes state:orientation based on dimensions of image
+  //changes state:orientation based on dimensions of image with relation to dimensions of viewport
   togglePortraitLandscape = () => {
-    const height = this.modalRef.current.clientHeight;
-    const width = this.modalRef.current.clientWidth;
+    const { clientWidth, clientHeight } = this.modalRef.current
+    const photoRatio = clientWidth / clientHeight
+    const windowRatio = window.innerWidth / window.innerHeight
 
-    width > height ? this.setState({ orientation: 'landscape' }) : this.setState({ orientation: 'portrait' })
+    photoRatio > windowRatio ? this.setState({ orientation: 'landscape' }) : this.setState({ orientation: 'portrait' })
   }
 
   //toggles className which in turn will/will not display modal

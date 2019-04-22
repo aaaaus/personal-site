@@ -56,12 +56,14 @@ class App extends Component {
         activePic={this.state.activePic}
          />
 
-        <header className="app-header">
+        <header className="navbar">
           <h3>Austin Luft</h3>
           <p>
             <a href="#new-york">New York</a> | <a href="#los-angeles">Los Angeles</a> | <a href="#europe">Europe</a>
           </p>
         </header>
+
+        <div className="navbar-shadow" />
 
         <LocationContainer
           location="New York"

@@ -79,8 +79,7 @@ class LocationContainer extends React.Component {
     return (
 
       <div className="location-container">
-        {this.helperText()}<br />
-
+        {this.helperText()}
         <div className="feature-image-div">
           {this.featureRender()}
           <span className="location-header" id={(this.props.location.toLowerCase().split(' ').join('-'))}>{this.props.location}</span>

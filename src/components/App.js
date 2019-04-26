@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import '../App.css';
 
 import photos from '../photo_data.js';
 
+import Navbar from './Navbar';
 import LocationContainer from './LocationContainer';
 import Modal from './Modal';
+
 
 class App extends Component {
 
@@ -56,13 +59,7 @@ class App extends Component {
         activePic={this.state.activePic}
          />
 
-        <header className="navbar">
-          <h3>Austin Luft</h3>
-          <p>
-            <a href="#new-york">New York</a> | <a href="#los-angeles">Los Angeles</a> | <a href="#europe">Europe</a>
-          </p>
-        </header>
-
+        <Navbar />
         <div className="navbar-shadow" />
 
         <LocationContainer

@@ -19,7 +19,7 @@ class LocationContainer extends React.Component {
   }
 
   //function returns JSX img tag if the photo matches the location and is flagged as featured
-  featureRender() {
+  featurePhoto() {
     const selectedPhoto = photos.filter(photo => photo.feature === true && photo.location === this.props.location)
 
     if (selectedPhoto.length > 0) {
@@ -54,6 +54,10 @@ class LocationContainer extends React.Component {
 
   }
 
+  idConverter() {
+      return this.props.location.toLowerCase().split(' ').join('-')
+  }
+
   //renders blank divs for gallery to fill out last row if less than 4 images
   // blankDivRender() {
   //
@@ -81,8 +85,8 @@ class LocationContainer extends React.Component {
       <div className="location-container">
         {this.helperText()}
         <div className="feature-image-div">
-          {this.featureRender()}
-          <span className="location-header" id={(this.props.location.toLowerCase().split(' ').join('-'))}>{this.props.location}</span>
+          {this.featurePhoto()}
+          <span className="location-header" id={this.idConverter()}>{this.props.location}</span>
         </div>
 
         <div className="gallery-wrapper">

@@ -43,7 +43,7 @@ class Modal extends React.Component {
   }
 
   render() {
-    const { activePic, hideModal, children } = this.props
+    const { hideModal } = this.props
     return (
       <div className={this.showHideClassName()} onClick={hideModal}>
         <div className="modal-main" >
